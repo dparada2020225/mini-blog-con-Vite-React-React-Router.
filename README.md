@@ -1,16 +1,47 @@
-# React + Vite
+# 🔴 PokéBlog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mini-blog de Pokémon construido con Vite + React + React Router. Nivel: **Senior**.
 
-Currently, two official plugins are available:
+## Tecnologías
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Vite + React
+- React Router DOM v6
+- PokéAPI (https://pokeapi.co)
+- Context API (favoritos globales)
+- PropTypes
 
-## React Compiler
+## Cómo correr el proyecto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Abre http://localhost:5173
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Rutas
+
+| Ruta | Descripción |
+|---|---|
+| `/` | Home con favoritos |
+| `/items` | Listado con búsqueda |
+| `/items/:id` | Detalle del Pokémon |
+| `*` | Página 404 |
+
+## Componente reutilizable: `PokemonCard`
+
+| Prop | Tipo | Requerido | Descripción |
+|---|---|---|---|
+| `id` | number | ✓ | ID del Pokémon |
+| `name` | string | ✓ | Nombre |
+| `sprite` | string | ✓ | URL de la imagen |
+| `types` | string[] | ✓ | Lista de tipos |
+
+## Nivel Senior — requisitos cumplidos
+
+- ✅ Context API: favoritos globales
+- ✅ PropTypes en Navbar, PokemonCard, SearchBar
+- ✅ Consumo de API externa (PokéAPI)
+- ✅ Página 404
+- ✅ Búsqueda/filtro en listado
+- ✅ Botón aleatorio con useNavigate
